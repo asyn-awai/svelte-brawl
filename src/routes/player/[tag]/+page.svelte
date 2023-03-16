@@ -7,7 +7,7 @@
 
 <div class="grid grid-rows-6 w-full p-10 text-white">
 	<section class="flex gap-5 items-center">
-		<TrophyProgress />
+		<TrophyProgress trophies={data.trophies} />
 		<!-- <div class="aspect-square w-40 relative">
 			<img src="https://cdn.brawlstats.com/player-thumbnails/28000163.png" alt="pfp" />
 			<div class="w-full flex items-center justify-center">

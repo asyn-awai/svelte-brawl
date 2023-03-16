@@ -4,10 +4,11 @@
     import type { Mode } from '$lib/types'
     // import icon from '$lib/images/img.png'
 
-    const getIcon = () => {
+    const getIcon = (name: string): string | null => {
         const icons: Partial<Record<Mode, string>> = {
             
-        }   
+        }
+        return icons[name] ?? null
     }
 </script>
 
@@ -15,7 +16,7 @@
     <p class='absolute skew-x-12 -top-5 font-lilita font-bold text-outline-1 text-white text-center'>
         {name}
     </p>
-    <p class='skew-x-12'>
+    <p class='skew-x-12 font-lilita text-white text-outline-1 font-bold'>
         {stat}
     </p>
 </div>
