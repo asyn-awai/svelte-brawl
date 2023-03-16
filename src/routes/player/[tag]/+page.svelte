@@ -2,11 +2,13 @@
 	export let data: Player;
 	import type { Player } from '$lib/types';
 	import { onMount } from 'svelte';
+	import TrophyProgress from '$lib/components/Trophy/TrophyProgress.svelte';
 </script>
 
 <div class="grid grid-rows-6 w-full p-10 text-white">
 	<section class="flex gap-5 items-center">
-		<div class="aspect-square w-40 relative">
+		<TrophyProgress />
+		<!-- <div class="aspect-square w-40 relative">
 			<img src="https://cdn.brawlstats.com/player-thumbnails/28000163.png" alt="pfp" />
 			<div class="w-full flex items-center justify-center">
 				<strong
@@ -18,6 +20,6 @@
 		<div class="flex flex-col gap-2">
 			<h2 class="font-extrabold text-3xl {data.nameColor}">{data.name}</h2>
             
-		</div>
+		</div> -->
 	</section>
 </div>
