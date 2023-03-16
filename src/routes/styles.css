@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+	.text-outline-2 {
+		-webkit-text-stroke: 2px black;
+	}
+	.text-outline-4 {
+		-webkit-text-stroke: 4px black;
+	}
+}
+
 html,
 body {
 	@apply h-full w-full p-0 m-0;

@@ -5,11 +5,11 @@
 </script>
 
 <div class="app">
-	<!-- <img src={bg} class='object-cover w-full h-full fixed -z-50'/> -->
+	<img src={bg} class='object-cover w-full h-full fixed -z-50' alt='background'/>
 	<Nav />
 
 	<div class='flex justify-center mt-5'>
-		<div class='w-9/12 main-container'>
+		<div class='w-8/12 main-container'>
 			<slot />
 		</div>
 	</div>
