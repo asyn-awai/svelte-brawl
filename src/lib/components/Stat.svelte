@@ -1,4 +1,4 @@
-<script>
+<script lang='ts'>
     export let name: string;
     export let value: string;
     import type { Mode } from '$lib/types'
