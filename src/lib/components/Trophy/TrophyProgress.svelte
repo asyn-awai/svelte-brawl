@@ -5,6 +5,6 @@
 </script>
 
 <div class='relative flex items-center'> 
-  <LeagueIcon twSize="h-[4.5rem]" />
-  <TrophyBar trophies={trophies} className='' />
+  <LeagueIcon twSize="h-[4.5rem]" className='z-10' />
+  <TrophyBar trophies={trophies} />
 </div>

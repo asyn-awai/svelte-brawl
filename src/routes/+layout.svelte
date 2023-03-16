@@ -5,7 +5,7 @@
 </script>
 
 <div class="app">
-	<img src={bg} class='object-cover w-full h-full fixed -z-50' alt='background'/>
+	<!-- <img src={bg} class='object-cover w-full h-full fixed -z-50' alt='background'/> -->
 	<Nav />
 
 	<div class='flex justify-center mt-5'>
