@@ -10,7 +10,7 @@
 			<img src="https://cdn.brawlstats.com/player-thumbnails/28000163.png" alt="pfp" />
 			<div class="w-full flex items-center justify-center">
 				<strong
-					class="s font-lilita text-xl bg-black px-2 font-bold absolute text-[#94e5ff] top-[90%] rounded-md"
+					class="s font-lilita text-2xl px-2 font-extrabold absolute text-outline-2 text-[#94e5ff] top-[90%] rounded-md"
 					>{data.tag}</strong
 				>
 			</div>
