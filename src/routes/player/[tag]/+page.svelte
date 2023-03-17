@@ -5,9 +5,6 @@
 	import TrophyProgress from '$lib/components/Trophy/TrophyProgress.svelte';
 	import Stat from '$lib/components/Stat.svelte';
 
-    $: {
-        console.log(data.icon)
-    }
 </script>
 
 <div class="grid grid-rows-6 w-full p-10 text-white">
