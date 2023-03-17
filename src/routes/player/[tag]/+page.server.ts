@@ -11,15 +11,15 @@ interface Params {
 const client = new BrawlAPI(BRAWL_API_KEY);
 
 export const load = async ({ params }: { params: Params }) => {
-	return {
-		trophies: 30000
-	}
-	// try {
-	// 	const playerData = client.getPlayer(params.tag);
-	// 	return playerData;
-	// } catch (err) {
-	// 	if (!(err instanceof APIError)) throw error(500, JSON.stringify(err));
-	// 	console.log(err.reason);
-	// 	throw error(err.code, err.reason);
+	// return {
+	// 	trophies: 30000
 	// }
+	try {
+		const playerData = client.getPlayer(params.tag);
+		return playerData
+	} catch (err) {
+		if (!(err instanceof APIError)) throw error(500, JSON.stringify(err));
+		console.log(err.reason);
+		throw error(err.code, err.reason);
+	}
 };

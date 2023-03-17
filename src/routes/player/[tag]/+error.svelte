@@ -3,5 +3,5 @@
 </script>
 
 <h1>
-    {$page.error?.reason ?? JSON.stringify($page.error)}
+    {JSON.stringify($page.error, null, 2)}
 </h1>

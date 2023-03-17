@@ -1,13 +1,27 @@
-<script lang='ts'>
-    export let trophies: number;
+<script lang="ts">
+	export let trophies: number;
+	import { getTrophyRangeData } from '$lib/utils/utils';
+	import trophy from '$lib/images/icon_trophy_small.png';
 
+	$: trophyRangeData = getTrophyRangeData(trophies);
 </script>
 
-<div class='-left-5 relative border border-4 border-black rounded-lg -skew-x-12 w-52 h-10'>
-    <div class='absolute flex h-full w-full items-center justify-center gap-x-2 skew-x-12'>
-        <img class='h-4/6' alt='trophy' src='https://scfiles.egnyte.com/dd/6BI9gxkHYI/?entryId=64a77232-a70b-41fd-9578-003119c1b331&thumbNail=1&w=1200&h=1200&type=proportional&preview=true' />
-        <p class='font-lilita font-bold text-outline-1 text-white'>30000/35000</p>
-    </div>
-    <div class='absolute w-full h-full rounded-sm -z-10 border-y-4 bg-[#4f2b26] border-t-[#5e342d] border-b-[#452621]' />
-    <div class='w-1/3 h-full border-y-4 bg-orange-500 border-t-orange-400 border-b-orange-600' />
+<div class="-left-5 relative border-4 border-black rounded-lg -skew-x-12 w-52 h-10">
+	<div class="absolute flex h-full w-full items-center justify-center gap-x-2 skew-x-12">
+		<img class="h-4/6" alt="trophy" src={trophy} />
+		<p class="text-xl font-lilita font-extrabold text-outline-1 text-white">
+			{`${trophies}/${trophyRangeData?.next}`}
+		</p>
+	</div>
+	<div class="absolute w-full h-full rounded-sm -z-10 flex flex-col">
+		<div class="flex-1 bg-[#3f211d] rounded-tr-sm" />
+		<div class="flex-1 bg-[#66251d] rounded-br-sm" />
+	</div>
+	<div
+		class="flex flex-col rounded-sm h-full"
+		style="width: {Math.min(100, trophies / (trophyRangeData?.next ?? 1) * 100)}%;"
+	>
+		<div class="flex-1 bg-orange-600 rounded-tr-sm" />
+		<div class="flex-1 bg-orange-500 rounded-br-sm" />
+	</div>
 </div>

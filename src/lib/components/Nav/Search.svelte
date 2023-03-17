@@ -11,10 +11,18 @@
 	$: {
 		// console.log(mouseDown)
 	}
-	let savedProfiles = [];
+	let savedProfiles: {
+		tag: string;
+		name: string;
+		nameColor: string;
+		trophies: number;
+	}[] = [];
 
 	onMount(() => {
-		const getSavedProfiles = JSON.parse(window.localStorage.getItem('savedProfiles'));
+		const getSavedProfiles = window.localStorage.getItem('savedProfiles');
+		if (!getSavedProfiles) {
+			window.localStorage.setItem('savedProfiles', JSON.stringify([]));
+		}
 		if (getSavedProfiles && Array.isArray(getSavedProfiles)) {
 			savedProfiles = getSavedProfiles;
 		}
@@ -54,7 +62,7 @@
 			>
 				<div class="py-0.5 bg-gray-300 w-full" />
 				<input
-					class="mx-3 uppercase font-lilita placeholder:font-bold placeholder:tracking-wider text-xl skew-x-12 ring-none outline-none w-5/6 flex-1"
+					class="bg-white mx-3 uppercase font-lilita placeholder:font-bold placeholder:tracking-wider text-xl skew-x-12 ring-none outline-none w-5/6 flex-1"
 					placeholder="#YOURTAG"
 					on:focus={() => (inputFocused = true)}
 					on:blur={() => (inputFocused = false)}

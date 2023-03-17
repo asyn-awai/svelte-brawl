@@ -2,7 +2,7 @@ import type { Player } from '$lib/types';
 import { APIError } from './Errors';
 
 export default class BrawlAPI {
-	private proxyURL = 'https://'
+	private proxyURL = 'https://bsproxy.royaleapi.dev/'; // 45.79.218.79
 	private baseURL = 'https://api.brawlstars.com/v1';
 	private headers = {
 		Authorization: `Bearer ${this.apiKey}`,

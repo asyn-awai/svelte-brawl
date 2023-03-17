@@ -5,7 +5,7 @@
     // import icon from '$lib/images/img.png'
 
     const getIcon = (name: string): string | null => {
-        const icons: Partial<Record<Mode, string>> = {
+        const icons: Partial<Record<string, string>> = {
             
         }
         return icons[name] ?? null
@@ -17,6 +17,6 @@
         {name}
     </p>
     <p class='skew-x-12 font-lilita text-white text-outline-1 font-bold'>
-        {stat}
+        {value}
     </p>
 </div>
