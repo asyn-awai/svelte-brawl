@@ -30,7 +30,7 @@
 </script>
 
 <div class="flex gap-5 items-center">
-	<button
+	<!-- <button
 		class={`flex items-center select-none`}
 		on:mousedown={() => (mouseDown = true)}
 		on:mouseup={() => (mouseDown = false)}
@@ -42,19 +42,25 @@
 				{` ${searchTypeFormat}`}
 			</b>
 		</p>
-	</button>
-	<!-- <div class='flex items-center font-lilita'>
-        <button class='border-black bg-black w-24 h-10 angled-right-container flex items-center justify-center p-1 pr-0.5 rounded-lg'>
-            <div class='bg-[#ee7527] w-full h-full flex items-center justify-center angled-right-inner rounded-md'>
+	</button> -->
+	<div class='flex items-center font-lilita'>
+        <button 
+			on:click={() => searchType = "player"}
+			class='border-black-500 bg-black w-24 h-11 angled-right-container flex items-center justify-center p-1 pr-0.5 rounded-lg rounded-tr-none rounded-br-none transition-transform {searchType === 'player' ? 'scale-105' : 'scale-100'}'
+		>
+            <div class='w-full h-full flex items-center justify-center angled-right-inner rounded-md rounded-tr-none rounded-br-none transition-colors {searchType === 'player' ? 'bg-orange-500' : 'bg-gray-600'} border-y-4 {searchType === 'player' ? 'border-t-orange-400 border-b-orange-600' : 'border-t-gray-500 border-b-gray-700'}'>
                 <p class='mr-5'>PLAYER</p>
             </div>
         </button>
-        <button class='border-black bg-black w-24 h-10 angled-left-container flex items-center justify-center p-1 pl-0.5 rounded-lg'>
-            <div class='bg-[#ee7527] w-full h-full flex items-center justify-center angled-left-inner rounded-md'>
+        <button 
+			on:click={() => searchType = "club"}
+			class='relative -left-[1.9rem] bg-black w-24 h-11  angled-left-container flex items-center justify-center p-1 pl-0.5 rounded-lg rounded-tl-none rounded-bl-none {searchType === 'club' ? 'scale-105' : 'scale-100'} transition-transform'
+		>
+            <div class='w-full h-full flex items-center justify-center angled-left-inner rounded-md rounded-tl-none rounded-bl-none transition-colors {searchType === 'club' ? 'bg-[#ee7527]' : 'bg-gray-600'} border-y-4 {searchType === 'club' ? 'border-t-orange-400 border-b-orange-600' : 'border-t-gray-500 border-b-gray-700'}'>
                 <p class='ml-5'>CLUB</p>
             </div>
         </button>
-    </div> -->
+    </div>
 	<div class="flex flex-col gap-5 relative">
 		<div class="flex items-center">
 			<div
