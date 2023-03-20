@@ -14,7 +14,7 @@ export interface Player {
 	expLevel: number;
 	expPoints: number;
 	highestTrophies: number;
-	powerPlayPoints: number;
+	// powerPlayPoints: number;
 	highestPowerPlayPoints: number;
 	soloVictories: number;
 	duoVictories: number;
